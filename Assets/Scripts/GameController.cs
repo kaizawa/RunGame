@@ -48,6 +48,11 @@ public class GameController : MonoBehaviour
         timeText.text = "残り時間: " + limit.ToString("f1") + "秒";
     }
 
+    public GameObject getPlayer()
+    {
+        return player;
+    }
+
     public void Goal()
     {
         StopObjects();

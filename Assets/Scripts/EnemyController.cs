@@ -5,18 +5,18 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-
-    public Transform target;
     public NavMeshAgent agent;
     public GameObject controllerObject;
+
     private GameController controller;
+    private Transform target;
 
 
     // Start is called before the first frame update
     void Start()
     {
         controller = controllerObject.GetComponent<GameController>();
-
+        target = controller.getPlayer().transform;
     }
 
     // Update is called once per frame
